@@ -16,7 +16,7 @@ node -v
 ```
 If you see a version, means installed.
 
-![node -v](https://github.com/jenac/html-school/raw/master/pics/node-v.png)
+![node -v](https://github.com/huaxia-code-school/QA/raw/master/pics/node-v.png)
 
 ## Install nvm
 Document: https://github.com/creationix/nvm
@@ -36,7 +36,7 @@ nvm list-remote
 ```
 The following should show (a little bit difference):
 
-![nvm list](https://github.com/jenac/html-school/raw/master/pics/nvmlist.png)
+![nvm list](https://github.com/huaxia-code-school/QA/raw/master/pics/nvmlist.png)
 
 
 ## Install nodejs
@@ -58,7 +58,7 @@ node -v
 ```
 npm i -g http-server
 ```
-![install http-server](https://github.com/jenac/html-school/raw/master/pics/installhttpserver.png)
+![install http-server](https://github.com/huaxia-code-school/QA/raw/master/pics/installhttpserver.png)
 
 
 ## Install vscode: **recommended** most popular code editor
@@ -77,9 +77,9 @@ mkdir C:\projects
 cd C:\projects
 http-server
 ```
-![run http server](https://github.com/jenac/html-school/raw/master/pics/http-server-run.png)
+![run http server](https://github.com/huaxia-code-school/QA/raw/master/pics/http-server-run.png)
 
 Open chrome and browse to the url showed in red circle
 
-![browse](https://github.com/jenac/html-school/raw/master/pics/browse.png)
+![browse](https://github.com/huaxia-code-school/QA/raw/master/pics/browse.png)
 

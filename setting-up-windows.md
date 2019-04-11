@@ -13,7 +13,7 @@ https://github.com/cmderdev/cmder/releases/download/v1.3.11/cmder.zip
 After downloaded the zip file, unzip it and recommend put it under `C:\Applications` folder. Make sure you have file named: `C:\Applications\cmder\Cmder.exe`
 
 Rum the Cmder.exe and pin it on task bar:
-![pin cmder](https://github.com/jenac/html-school/raw/master/pics/cmder-pin.png)
+![pin cmder](https://github.com/huaxia-code-school/QA/raw/master/pics/cmder-pin.png)
 
 ## If you already have nodejs installed, directly go to Install http-server
 To verify nodejs installation:
@@ -22,7 +22,7 @@ node -v
 ```
 If you see a version, means installed.
 
-![node -v](https://github.com/jenac/html-school/raw/master/pics/node-v.png)
+![node -v](https://github.com/huaxia-code-school/QA/raw/master/pics/node-v.png)
 
 ## Install nvm 
 * Document here: https://github.com/coreybutler/nvm-windows
@@ -36,7 +36,7 @@ nvm list available
 ```
 The following should show:
 
-![nvm list](https://github.com/jenac/html-school/raw/master/pics/nvmlist.png)
+![nvm list](https://github.com/huaxia-code-school/QA/raw/master/pics/nvmlist.png)
 
 
 ## Install nodejs
@@ -58,7 +58,7 @@ node -v
 ```
 npm i -g http-server
 ```
-![install http-server](https://github.com/jenac/html-school/raw/master/pics/installhttpserver.png)
+![install http-server](https://github.com/huaxia-code-school/QA/raw/master/pics/installhttpserver.png)
 
 
 ## Install vscode: **recommended** most popular code editor
@@ -77,9 +77,9 @@ mkdir C:\projects
 cd C:\projects
 http-server
 ```
-![run http server](https://github.com/jenac/html-school/raw/master/pics/http-server-run.png)
+![run http server](https://github.com/huaxia-code-school/QA/raw/master/pics/http-server-run.png)
 
 Open chrome and browse to the url showed in red circle
 
-![browse](https://github.com/jenac/html-school/raw/master/pics/browse.png)
+![browse](https://github.com/huaxia-code-school/QA/raw/master/pics/browse.png)
 
