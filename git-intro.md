@@ -10,3 +10,71 @@ Git is an open-source distributed source code management system.
 
 # Git works with remote
 ![git remote](https://github.com/huaxia-code-school/QA/raw/master/pics/git-basic-2.png)
+
+# Lab with git
+* ## config git
+```
+git config --global user.name "Your Name Comes Here"
+git config --global user.email you@yourdomain.example.com
+```
+
+# ## create a repo on github
+<pic>
+* ## create a local repo
+```
+git init
+```
+or clone from remote
+```
+git clone ....
+```
+
+* ## create a html file, named first.html
+```html
+<html>
+  <body>
+    <h1>My 1st html</h1>
+  </body>
+</html>
+```
+* ## check git status
+```
+git status
+```
+
+* ## adding to stage 
+```
+git add first.html
+```
+
+* ## check git status again
+```
+git status
+```
+
+* ## commit your file to local repo
+```
+git commit -m "some message here"
+```
+
+* ## change first.html to:
+```
+<html>
+  <body>
+    <h1>My 1st/2nd html</h1>
+    <h2> My change here <>
+  </body>
+</html>
+```
+* ## check git status again
+```
+git status
+```
+* ## commit your file to local repo
+```
+git commit -m "some message here"
+```
+* ## Push to remote
+```
+git push
+```
