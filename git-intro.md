@@ -23,6 +23,9 @@ git config --global user.email you@yourdomain.example.com
 
 ![git remote](https://github.com/huaxia-code-school/QA/raw/master/pics/new-repo-2.png)
 
+**When creating a repository, you can choose to make it public or private. Public repositories are accessible to everyone using GitHub.com, while private repositories are accessible to you and the people you share them with.**
+
+**Never commit personal username/password or any sensitive data into git**
 
 * ## clone repo from remote
 ![git remote](https://github.com/huaxia-code-school/QA/raw/master/pics/repo-url.png)
