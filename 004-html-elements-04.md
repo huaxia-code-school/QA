@@ -51,9 +51,10 @@ a:active {
 
 ### Use image as Link
 ```
-<a href="https://en.wikipedia.org/wiki/Puppy">
+<a href="https://en.wikipedia.org/wiki/Puppy" title="A cute puppy">
   <img src="pics/puppy.jpg">
 </a>
 ```
-see image-as-link.html
+* where shows the title?
+* see image-as-link.html
 
