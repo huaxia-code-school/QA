@@ -18,13 +18,17 @@ git config --global user.name "Your Name Comes Here"
 git config --global user.email you@yourdomain.example.com
 ```
 
-# ## create a repo on github
-<pic>
-* ## create a local repo
-```
-git init
-```
-or clone from remote
+# create a repo on github
+![git remote](https://github.com/huaxia-code-school/QA/raw/master/pics/new-repo.png)
+
+![git remote](https://github.com/huaxia-code-school/QA/raw/master/pics/new-repo-2.png)
+
+
+* ## clone repo from remote
+![git remote](https://github.com/huaxia-code-school/QA/raw/master/pics/repo-url.png)
+
+findout repo url:
+
 ```
 git clone ....
 ```
