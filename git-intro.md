@@ -85,3 +85,38 @@ git commit -m "some message here"
 ```
 git push
 ```
+
+# Questions and Answers
+
+### Q: What is the purpose of Config git?
+
+A: In software development, multiple developers will commit to same repo. The git config for `user.name` and `user.email` is to identify who made the changes. The `user.name` do not need match your Github username, the `user.email` does not need to match the your Github email either.
+
+### Q: Clone repo from remote: what remote?
+
+A: A remote usually means the repo on the server. In our context is the repo on Github.com. There are some other source control providers also provide git repo service: Bitbucket, Azure Devops and so on. In addition, can a local repo has multiple remote? The answer is **yes**. For now it is too complicate for us. Let's focus on 1 remote right now.
+
+### Q: Create a html, named first.html: where? Github or vscode? And how?
+
+A: Here means on your local working directory. Once you cloned a repo, a sub folder will be created. It is your **working directory**. The sub folder by default has the same name with your remote/github repo. In the sub folder you will find a `.git ` folder, that is your **local repo**. See the first picture you will get better understanding. 
+How to create the first.html? Use vscode is a good way. Actually anyway is OK. As long as the file is under your **working directory**.
+Can you create the html directly on Github.com? The answer is **Yes**. 
+
+### Q: When I typed in `code .` It opened vscode. 
+
+A: Yes, it open vscode and directly open the folder where you typed the command. Then you can create html using vscode. 
+
+You can get the same by open vscode first, then use the menu File -> Open Folder ... and select the folder where you typed the command.
+
+### Q: Check git status: which status? Github repo status or vscode status?
+
+A: It is your working directory status. It shows which files are changed, which files are in staging and so on. 
+
+The command need to be run under the **working directory**. The following command also need run under **working directory**: 
+* `git commit`
+* `git add` 
+* `git push`
+* `git pull`
+
+
+
