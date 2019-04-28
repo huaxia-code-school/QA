@@ -1,0 +1,44 @@
+Registration Total: <span id="registration_total">0.00</span>
+<script>
+
+var $jq = jQuery.noConflict();
+$jq(document).ready(function() { 
+  let chineseClasses = ["pdb-chinese-v0---speaking", "pdb-chinese-ck", "pdb-chinese-c1", "pdb-chinese-c2", "pdb-chinese-c3", "pdb-chinese-c4", "pdb-chinese-c5", "pdb-chinese-c6", "pdb-chinese-c7", "pdb-chinese-c8", "pdb-chinese-c-ap"];
+  let mathClasses = ["pdb-math-m1", "pdb-math-m2", "pdb-math-m3", "pdb-math-m4", "pdb-math-m5", "pdb-math-m6", "pdb-math-math_club"];
+  let engClasses = ["pdb-english_writing-w19-11-yrs", "pdb-english_writing-w212-15-yrs"];
+  let drawingClasses = ["pdb-drawing-d1", "pdb-drawing-d2"];
+  let basketballClasses = ["pdb-basketball-b14-7-yrs", "pdb-basketball-b28-12-yrs"];
+  let badmintonClasses = ["pdb-badminton-y18-12-yrs", "pdb-badminton-y2-13-18-yrs"];
+  let allClasses = chineseClasses.concat(mathClasses, engClasses, drawingClasses, basketballClasses, badmintonClasses);
+
+  allClasses.forEach((e) => {
+    document.getElementById(e).addEventListener("change", () => {
+      console.log("recalculate!", e);  
+      let total = 0.0;
+      for(var i = 0; i < allClasses.length; i++) {
+        let classId = allClasses[i];
+        if (document.getElementById(classId).checked) {
+          if (chineseClasses.includes(classId)) {
+            total = total + 200 + 90;
+          } else if (mathClasses.includes(classId)) {
+            total = total + 110 + 20;
+          } else if (engClasses.includes(classId)) {
+            total = total + 200;
+          } else if (drawingClasses.includes(classId)) {
+            total = total + 120;
+          } else if (basketballClasses.includes(classId)) {
+            total = total + 160;
+          } else if (badmintonClasses.includes(classId)) {
+            total = total + 130;
+          }
+        }
+      }
+      if (total > 0) {
+        total = total + 20; //registration fee
+      }
+      document.getElementById("registration_total").innerText = total;
+    });
+  })
+});
+
+</script>
