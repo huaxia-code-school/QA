@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, students!</title>
+
+    <script>
+        const API_HOST = 'http://localhost:3000';
+        const loadStudents = () => {
+            fetch(`${API_HOST}/students`)
+                .then(response => response.json())
+                .then(json => {
+                    document.getElementById('tableBody').innerHTML = studentsToRows(json);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // self executing function here
+        // (function() {
+        (() => {
+            loadStudents();
+        })();
+
+
+        function studentsToRows(students) {
+            return students.map(s => `<tr>
+                            <th scope="row">${s.id}</th>
+                            <td>${s.firstName}</td>
+                            <td>${s.lastName}</td>
+                            <td>${s.grade}</td>
+                        </tr>`).join('\r\n');
+            ;
+        }
+
+        function saveStudent(event) {
+            event.preventDefault();
+            const student = {
+                firstName: event.target.firstName.value,
+                lastName: event.target.lastName.value,
+                grade: parseInt(event.target.grade.value)
+            }
+            // console.log(student);
+            fetch(`${API_HOST}/students`, {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(student),
+            })
+                .then(response => response.json())
+                .then(json => {
+                    loadStudents();
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron mt-3">
+            <h1>Students</h1>
+            <form class="form-inline" onsubmit="saveStudent(event)">
+                <div class="form-group mb-2">
+                    <input type="text" class="form-control" id="firstName" placeholder="First">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="lastName" placeholder="Last">
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="grade" placeholder="Grade">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Add Student</button>
+            </form>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
